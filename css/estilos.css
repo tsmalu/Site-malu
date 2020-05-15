@@ -1,34 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-image: url('https://static.significados.com.br/foto/da4f-cor-cinza-significados.jpg');
-    background-size: auto 100vh;
-      
-    font-family: verdana;
+  background-size: auto 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  background-color: #e8e8e8;
+   }
+  
+   
+/* Se a tela tiver pelo menos 400px vai carregar esses estilos */ 
+@media (min-width: 400px ) {
+body {
+  font-size: 16px;
+    }
+}
+  
+header {
+height: 70vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.menu {
+  background-color: #e8e8e8;
+  font-size: 1.3em;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  padding-right: 100px;
+  
+  
+   }
+.menu ul{
+  display: flex;
+  float: right;
+
+   }
+a {
+  color: #383838;
+  text-decoration: none;
+   }
+a:hover {
+  text-decoration: underline;
+   }
+.menu a {
+  display: block;
+  padding: 20px;
+}
+.menu li {
+  list-style: none;
    }
    
-   .menu {
-     background-color: white; 
+.site-subtitle, .site-title {
+  color: #383838;
+  text-align: center;
    }
-   .menu ul{
-     display: flex;
-     justify-content: space-around;
+
+/* A medida em é relacionadda ao tamanho do body */ 
+.site-title {
+  font-size: 3em;
+}
+   
+.avatar {
+  display: block;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0px auto;
+  margin-top: 10px;
    }
-   
-   a {
-     color: #383838;
-     text-decoration: none;
-   }
-   
-   a:hover {
-     text-decoration: underline;
-   }
-   
-   .menu li {
-     list-style: none;
-   }
-   
-   .site-subtitle, .site-title {
-     color: #383838;
-     text-align: center;
-   }
-   
-   
+
+.portfolio {
+  padding: 2em;
+  height: 100vh;
+}
+
+.portfolio h2 {
+  color: #383838;
+font-family: 'Montserrat', sans-serif;
+text-align: center;
+margin-bottom: 1.5em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+
+@media (min-width: 320px) {
+.menu {
+ justify-content: center;
+  padding-right: 0px;
+  font-size: 1.5em;
+}
+
+@media (min-width: 500px) {
+  .portfolio .grid {
+    grid-template-columns: 300px 300px;
+  }
+
+.menu {
+ justify-content: center;
+  padding-right: 0px;
+  font-size: 1.5em;
+}
+}
+
+@media (min-width: 1000px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio{
+  height: 250px;
+  margin: 0px auto;
+  object-fit: cover;
+}
+
